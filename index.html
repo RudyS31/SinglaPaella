@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singla Paëlla - Traiteur & Paella pour vos Événements</title>
+    <title>Singla Paëlla - Traiteur &amp; Paella pour vos Événements</title>
+    <meta name="description" content="Singla Paëlla, traiteur à Verfeil (31) : paella, fideua, rougail et plats mijotés cuisinés sur place pour vos mariages, fêtes de famille et événements d'entreprise, de 10 à 300 convives.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Singla Paëlla - Traiteur &amp; Paella pour vos Événements">
+    <meta property="og:description" content="Paella et plats mijotés cuisinés sur place pour vos événements, de 10 à 300 convives. Devis en ligne.">
+    <meta name="theme-color" content="#C8381A">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥘</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -17,6 +23,7 @@
                     colors: {
                         paprika: '#C8381A',
                         saffron: '#E68A00',
+                        saffronDark: '#B45309',
                         warmYellow: '#F2B705',
                         riceCream: '#FFFDF9',
                         slateDark: '#1E232A',
@@ -30,12 +37,16 @@
         }
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
         .bg-pattern {
-            background-color: #1E232A;
-            background-image: radial-gradient(#E68A00 0.75px, transparent 0.75px), radial-gradient(#E68A00 0.75px, #1E232A 0.75px);
-            background-size: 30px 30px;
-            background-position: 0 0, 15px 15px;
-            background-opacity: 0.05;
+            background-image: radial-gradient(rgba(230, 138, 0, 0.18) 1px, transparent 1px);
+            background-size: 24px 24px;
         }
         .hero-gradient {
             background: linear-gradient(135deg, rgba(30, 35, 42, 0.88) 0%, rgba(200, 56, 26, 0.75) 100%);
@@ -54,12 +65,11 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-orange-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="#accueil" onclick="scrollToSection(event, 'accueil')" class="flex items-center gap-3 group">
+                <a href="#accueil" class="flex items-center gap-3 group">
                     <div class="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-tr from-paprika to-saffron p-1 shadow-md group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center">
                         <img src="https://thumbs.dreamstime.com/b/crevette-de-bande-dessin%C3%A9e-69115140.jpg" 
-                             alt="Logo Singla Paella" 
-                             class="w-full h-full object-cover rounded-full"
-                             onerror="this.src='https://placehold.co/100x100/C8381A/FFF?text=Paella'"/>
+                             alt="Logo Singla Paëlla" 
+                             class="w-full h-full object-cover rounded-full" />
                     </div>
                     <div class="flex flex-col items-center">
                         <span class="block text-2xl font-extrabold font-serif tracking-tight text-paprika leading-none text-center">Singla Paëlla</span>
@@ -69,22 +79,22 @@
 
                 <!-- Navigation Desktop -->
                 <nav class="hidden md:flex items-center gap-8 font-medium">
-                    <a href="#accueil" onclick="scrollToSection(event, 'accueil')" class="text-slateDark hover:text-paprika transition-colors py-1">Accueil</a>
-                    <a href="#specialites" onclick="scrollToSection(event, 'specialites')" class="text-slateDark hover:text-paprika transition-colors py-1">Nos Recettes</a>
-                    <a href="#prestations" onclick="scrollToSection(event, 'prestations')" class="text-slateDark hover:text-paprika transition-colors py-1">Prestations</a>
-                    <a href="#engagements" onclick="scrollToSection(event, 'engagements')" class="text-slateDark hover:text-paprika transition-colors py-1">Nos Engagements</a>
+                    <a href="#accueil" class="text-slateDark hover:text-paprika transition-colors py-1">Accueil</a>
+                    <a href="#specialites" class="text-slateDark hover:text-paprika transition-colors py-1">Nos Recettes</a>
+                    <a href="#prestations" class="text-slateDark hover:text-paprika transition-colors py-1">Prestations</a>
+                    <a href="#engagements" class="text-slateDark hover:text-paprika transition-colors py-1">Nos Engagements</a>
                 </nav>
 
                 <!-- Bouton Action / Devis -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="#devis" onclick="scrollToSection(event, 'devis')" class="bg-gradient-to-r from-paprika to-saffron text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg hover:brightness-110 transition-all transform active:scale-95 flex items-center gap-2">
+                    <a href="#devis" class="bg-gradient-to-r from-paprika to-saffron text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg hover:brightness-110 transition-all transform active:scale-95 flex items-center gap-2">
                         <i class="fa-solid fa-calculator"></i>
                         <span>Devis Express</span>
                     </a>
                 </div>
 
                 <!-- Bouton Menu Mobile -->
-                <button id="mobile-menu-btn" class="md:hidden text-slateDark text-2xl p-2 focus:outline-none" aria-label="Menu Mobile">
+                <button id="mobile-menu-btn" class="md:hidden text-slateDark text-2xl p-2 focus:outline-none" aria-label="Menu Mobile" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fa-solid fa-bars" id="menu-icon"></i>
                 </button>
             </div>
@@ -92,20 +102,19 @@
 
         <!-- Menu Mobile déroulant -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-orange-100 px-4 pt-2 pb-6 space-y-3">
-            <a href="#accueil" onclick="scrollToSection(event, 'accueil')" class="mobile-link block py-2 text-slateDark font-medium hover:text-paprika">Accueil</a>
-            <a href="#specialites" onclick="scrollToSection(event, 'specialites')" class="mobile-link block py-2 text-slateDark font-medium hover:text-paprika">Nos Paellas</a>
-            <a href="#prestations" onclick="scrollToSection(event, 'prestations')" class="mobile-link block py-2 text-slateDark font-medium hover:text-paprika">Prestations</a>
-            <a href="#engagements" onclick="scrollToSection(event, 'engagements')" class="mobile-link block py-2 text-slateDark font-medium hover:text-paprika">Nos Engagements</a>
-            <a href="#devis" onclick="scrollToSection(event, 'devis')" class="mobile-link block w-full text-center bg-paprika text-white py-3 rounded-xl font-semibold shadow">Demander un Devis</a>
+            <a href="#accueil" class="block py-2 text-slateDark font-medium hover:text-paprika">Accueil</a>
+            <a href="#specialites" class="block py-2 text-slateDark font-medium hover:text-paprika">Nos Recettes</a>
+            <a href="#prestations" class="block py-2 text-slateDark font-medium hover:text-paprika">Prestations</a>
+            <a href="#engagements" class="block py-2 text-slateDark font-medium hover:text-paprika">Nos Engagements</a>
+            <a href="#devis" class="block w-full text-center bg-paprika text-white py-3 rounded-xl font-semibold shadow">Demander un Devis</a>
         </div>
     </header>
 
     <section id="accueil" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slateDark text-white py-20">
         <div class="absolute inset-0 z-0 opacity-40">
             <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=1920&q=80" 
-                 alt="Paella Géante Cuisson" 
-                 class="w-full h-full object-cover"
-                 onerror="this.src='https://placehold.co/1920x1080/1E232A/E68A00?text=La+Paella+Familiale'"/>
+                 alt="Paella géante en cours de cuisson" fetchpriority="high" 
+                 class="w-full h-full object-cover" />
         </div>
         <div class="absolute inset-0 hero-gradient z-0"></div>
 
@@ -125,10 +134,10 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="#devis" onclick="scrollToSection(event, 'devis')" class="w-full sm:w-auto bg-gradient-to-r from-paprika to-saffron text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all text-center">
+                <a href="#devis" class="w-full sm:w-auto bg-gradient-to-r from-paprika to-saffron text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all text-center">
                     Calculer mon tarif
                 </a>
-                <a href="#specialites" onclick="scrollToSection(event, 'specialites')" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
+                <a href="#specialites" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
                     Découvrir la carte
                 </a>
             </div>
@@ -136,7 +145,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/10 max-w-4xl mx-auto text-center">
                 <div>
                     <span class="block text-3xl font-extrabold text-warmYellow">Produits Frais</span>
-                    <span class="text-xs text-gray-300 uppercase tracking-wider">Qualité garantie</span>
+                    <span class="text-xs text-gray-300 uppercase tracking-wider">Viandes françaises</span>
                 </div>
                 <div>
                     <span class="block text-3xl font-extrabold text-warmYellow">10 à 300</span>
@@ -147,8 +156,8 @@
                     <span class="text-xs text-gray-300 uppercase tracking-wider">Savoir-faire</span>
                 </div>
                 <div>
-                    <span class="block text-3xl font-extrabold text-warmYellow">5/5</span>
-                    <span class="text-xs text-gray-300 uppercase tracking-wider">Avis Clients</span>
+                    <span class="block text-3xl font-extrabold text-warmYellow">Sur place</span>
+                    <span class="text-xs text-gray-300 uppercase tracking-wider">Cuisson devant vos invités</span>
                 </div>
             </div>
         </div>
@@ -157,7 +166,7 @@
     <section id="specialites" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-saffron font-bold uppercase tracking-wider text-sm">Gourmandise & Amour</span>
+                <span class="text-saffronDark font-bold uppercase tracking-wider text-sm">Gourmandise & Amour</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold font-serif text-slateDark">Nos Recettes Phares</h2>
                 <div class="w-20 h-1 bg-paprika mx-auto rounded-full"></div>
                 <p class="text-gray-600 text-lg">
@@ -172,11 +181,10 @@
                 <!-- Carte 1 : Traditionnelle (La Tradi) -->
                 <div class="bg-riceCream rounded-3xl overflow-hidden border border-orange-100 shadow-sm card-hover flex flex-col justify-between">
                     <div>
-                        <div class="h-56 relative overflow-hidden">
+                        <div class="h-56 relative overflow-hidden bg-orange-100">
                             <img src="https://assets.afcdn.com/recipe/20190827/96838_w1024h768c1cx2100cy1400cxt0cyt0cxb4200cyb2800.jpg" 
                                  alt="Paella Traditionnelle" 
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                 onerror="this.src='https://placehold.co/800x600/D97706/FFFFFF?text=La+Tradi';"/>
+                                 loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                             <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-paprika text-xs font-bold px-3 py-1 rounded-full shadow">La Tradi</span>
                         </div>
                         <div class="p-6 space-y-4">
@@ -190,10 +198,10 @@
                             <div class="pt-2">
                                 <span class="text-xs font-semibold text-slateDark uppercase tracking-wider block mb-2">Ingrédients clés :</span>
                                 <div class="flex flex-wrap gap-1.5 text-xs">
-                                    <span class="bg-orange-100 text-saffron font-medium px-2.5 py-1 rounded-md">Poulet</span>
-                                    <span class="bg-orange-100 text-saffron font-medium px-2.5 py-1 rounded-md">Encornets</span>
-                                    <span class="bg-orange-100 text-saffron font-medium px-2.5 py-1 rounded-md">Gambas</span>
-                                    <span class="bg-orange-100 text-saffron font-medium px-2.5 py-1 rounded-md">Moules</span>
+                                    <span class="bg-orange-100 text-saffronDark font-medium px-2.5 py-1 rounded-md">Poulet</span>
+                                    <span class="bg-orange-100 text-saffronDark font-medium px-2.5 py-1 rounded-md">Encornets</span>
+                                    <span class="bg-orange-100 text-saffronDark font-medium px-2.5 py-1 rounded-md">Gambas</span>
+                                    <span class="bg-orange-100 text-saffronDark font-medium px-2.5 py-1 rounded-md">Moules</span>
                                 </div>
                             </div>
                         </div>
@@ -208,11 +216,10 @@
                 <!-- Carte 2 : La Fideua -->
                 <div class="bg-riceCream rounded-3xl overflow-hidden border border-paprika/30 shadow-md card-hover flex flex-col justify-between relative">
                     <div>
-                        <div class="h-56 relative overflow-hidden">
+                        <div class="h-56 relative overflow-hidden bg-orange-100">
                             <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/E6915739-B79E-4880-AFB4-752A28E13A49/Derivates/1AFAA03E-A550-4015-8F5B-5D8727762C1F.jpg" 
                                  alt="Fideua de fruits de mer" 
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                 onerror="this.src='https://placehold.co/800x600/DC2626/FFFFFF?text=La+Fideua';"/>
+                                 loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                             <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-paprika text-xs font-bold px-3 py-1 rounded-full shadow">La Fideua</span>
                         </div>
                         <div class="p-6 space-y-4">
@@ -244,17 +251,16 @@
                 <!-- Carte 3 : Le Rougail -->
                 <div class="bg-riceCream rounded-3xl overflow-hidden border border-orange-100 shadow-sm card-hover flex flex-col justify-between">
                     <div>
-                        <div class="h-56 relative overflow-hidden">
+                        <div class="h-56 relative overflow-hidden bg-orange-100">
                             <img src="https://recettes-cookeo.com/wp-content/uploads/2026/07/rougail-saucisse-1280x540.png" 
                                  alt="Rougail Saucisses" 
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                 onerror="this.src='https://placehold.co/800x600/10B981/FFFFFF?text=Le+Rugai';"/>
+                                 loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                             <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-emerald-700 text-xs font-bold px-3 py-1 rounded-full shadow">Le Rougail</span>
                         </div>
                         <div class="p-6 space-y-4">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-2xl font-bold font-serif text-slateDark">Le Rougail</h3>
-                                <span class="text-xl font-extrabold text-paprika">14€ <span class="text-xs text-gray-500 font-normal">/pers</span></span>
+                                <span class="text-xl font-extrabold text-paprika">12€ <span class="text-xs text-gray-500 font-normal">/pers</span></span>
                             </div>
                             <p class="text-gray-600 text-sm leading-relaxed">
                                 Une pointe d'exotisme dans votre assiette : le fameux rougail saucisse, disponible avec ou sans piment.
@@ -271,7 +277,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0">
-                        <button onclick="selectRecipe('rugai')" class="w-full text-center bg-orange-50 hover:bg-paprika hover:text-white text-paprika font-bold py-3 rounded-xl transition-colors border border-paprika/20">
+                        <button onclick="selectRecipe('rougail')" class="w-full text-center bg-orange-50 hover:bg-paprika hover:text-white text-paprika font-bold py-3 rounded-xl transition-colors border border-paprika/20">
                             Sélectionner cette recette
                         </button>
                     </div>
@@ -283,17 +289,17 @@
     <section id="prestations" class="py-24 bg-riceCream bg-pattern border-y border-orange-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-paprika font-black uppercase tracking-widest text-lg sm:text-xl block">Sur-Mesure</span>
+                <span class="text-paprika font-extrabold uppercase tracking-widest text-lg sm:text-xl block">Sur-Mesure</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold font-serif text-slateDark">Nos Prestations Événementielles</h2>
                 <div class="w-20 h-1 bg-paprika mx-auto rounded-full"></div>
-                <p class="text-saffron font-medium text-lg sm:text-xl leading-relaxed">
+                <p class="text-saffronDark font-medium text-lg sm:text-xl leading-relaxed">
                     Nous nous déplaçons directement chez vous, dans votre salle de réception ou au sein de votre entreprise avec tout le matériel nécessaire.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-orange-100 space-y-4 text-center group hover:border-saffron transition-all">
-                    <div class="w-16 h-16 bg-orange-100 text-saffron rounded-2xl flex items-center justify-center text-3xl mx-auto group-hover:bg-saffron group-hover:text-white transition-all">
+                    <div class="w-16 h-16 bg-orange-100 text-saffronDark rounded-2xl flex items-center justify-center text-3xl mx-auto group-hover:bg-saffron group-hover:text-white transition-all">
                         <i class="fa-solid fa-cake-candles"></i>
                     </div>
                     <h3 class="text-2xl font-bold font-serif text-slateDark">Événements Familiaux</h3>
@@ -330,7 +336,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 
                 <div class="space-y-6">
-                    <span class="text-saffron font-bold uppercase tracking-wider text-sm">Pourquoi Nous Choisir</span>
+                    <span class="text-saffronDark font-bold uppercase tracking-wider text-sm">Pourquoi Nous Choisir</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-slateDark">
                         Le goût de l'authenticité
                     </h2>
@@ -340,7 +346,7 @@
 
                     <div class="space-y-4 pt-2">
                         <div class="flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-orange-100 text-saffron flex items-center justify-center shrink-0 font-bold">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 text-saffronDark flex items-center justify-center shrink-0 font-bold">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
@@ -350,7 +356,7 @@
                         </div>
 
                         <div class="flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-orange-100 text-saffron flex items-center justify-center shrink-0 font-bold">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 text-saffronDark flex items-center justify-center shrink-0 font-bold">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
@@ -360,7 +366,7 @@
                         </div>
 
                         <div class="flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-full bg-orange-100 text-saffron flex items-center justify-center shrink-0 font-bold">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 text-saffronDark flex items-center justify-center shrink-0 font-bold">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
@@ -413,9 +419,13 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
             <div class="bg-white text-slateDark rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-12">
                 <!-- Formulaire connecté avec FormSubmit -->
                 <form id="quote-form" action="https://formsubmit.co/singla.paella@gmail.com" method="POST" class="lg:col-span-7 p-6 sm:p-10 space-y-6">
-                    <input type="hidden" name="_subject" value="Nouvelle Demande de Devis - Singla Paella">
+                    <!-- Options de configuration FormSubmit -->
+                    <input type="hidden" name="_subject" value="🥘 NOUVELLE DEMANDE DE DEVIS - Singla Paëlla">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" id="hidden-total" name="Montant_Estime" value="520,00 €">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse" value="Bonjour ! Merci d'avoir contacté Singla Paëlla. Nous avons bien enregistré votre demande de devis. Notre équipe étudie les disponibilités à la date demandée et revient vers vous rapidement. Pour toute urgence ou précision concernant votre demande, n'hésitez pas à nous appeler directement au 06 85 88 22 50. Gourmandement vôtre, Valérie & Yannick — Singla Paëlla">
+                    <input type="hidden" id="hidden-total" name="Montant_Estime" value="560,00 €">
 
                     <div>
                         <label class="block text-sm font-bold text-slateDark mb-2" for="recipe">1. Choisir la recette</label>
@@ -435,14 +445,14 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                         <div class="flex justify-between items-center mb-2">
                             <label class="text-sm font-bold text-slateDark" for="guests">2. Nombre de convives</label>
                             <div class="flex items-center gap-2">
-                                <input type="number" id="guests-number" name="Nombre_de_convives" min="10" max="300" value="40" 
+                                <input type="number" id="guests-number" aria-label="Nombre de convives (saisie)" name="Nombre_de_convives" min="10" max="300" value="40" 
                                        class="w-20 bg-orange-50 border border-paprika/30 text-paprika font-extrabold text-center rounded-lg py-1 px-2 text-sm focus:ring-2 focus:ring-paprika outline-none">
                                 <span class="text-sm font-semibold text-slateDark">pers.</span>
                             </div>
                         </div>
                         <input type="range" id="guests" min="10" max="300" step="1" value="40" 
                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-paprika">
-                        <div class="flex justify-between text-xs text-gray-400 mt-1">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
                             <span>10 pers. min</span>
                             <span>150 pers.</span>
                             <span>300 pers. max</span>
@@ -451,42 +461,49 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-bold text-slateDark mb-2">Date souhaitée</label>
-                            <input type="date" name="Date_Evenement" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
+                            <label class="block text-sm font-bold text-slateDark mb-2" for="event-date">Date souhaitée</label>
+                            <input type="date" id="event-date" name="Date_Evenement" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slateDark mb-2">Ville de l'événement</label>
-                            <input type="text" name="Ville" placeholder="Ex: Toulouse, Verfeil..." required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
+                            <label class="block text-sm font-bold text-slateDark mb-2" for="event-city">Ville de l'événement</label>
+                            <input type="text" id="event-city" name="Ville" autocomplete="address-level2" placeholder="Ex: Toulouse, Verfeil..." required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-bold text-slateDark mb-2">Votre Nom</label>
-                            <input type="text" name="Nom_Client" placeholder="Nom complet" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
+                            <label class="block text-sm font-bold text-slateDark mb-2" for="client-name">Votre Nom</label>
+                            <input type="text" id="client-name" name="Nom_Client" autocomplete="name" placeholder="Nom complet" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slateDark mb-2">Téléphone</label>
-                            <input type="tel" name="Telephone" placeholder="06 00 00 00 00" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
+                            <label class="block text-sm font-bold text-slateDark mb-2" for="client-phone">Téléphone</label>
+                            <input type="tel" id="client-phone" name="Telephone" autocomplete="tel" placeholder="06 00 00 00 00" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-bold text-slateDark mb-2">Adresse E-mail</label>
-                        <input type="email" name="email" placeholder="votre.email@exemple.com" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
+                        <label class="block text-sm font-bold text-slateDark mb-2" for="client-email">Adresse E-mail</label>
+                        <input type="email" id="client-email" name="email" autocomplete="email" placeholder="votre.email@exemple.com" required class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none text-sm">
                     </div>
 
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <label class="block text-sm font-bold text-slateDark" for="quote-comment">Message ou précisions (optionnel)</label>
-                            <span id="char-counter" class="text-xs text-gray-400 font-medium">300 car. restants</span>
+                            <span id="char-counter" class="text-xs text-gray-500 font-medium">300 car. restants</span>
                         </div>
                         <textarea id="quote-comment" name="Message_Client" maxlength="300" rows="3" 
                                   placeholder="Régimes alimentaires particuliers, accès au lieu, horaire souhaité..." 
                                   class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-paprika outline-none resize-none"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-gradient-to-r from-paprika to-saffron text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                    <label class="flex items-start gap-3 text-xs text-gray-600 leading-relaxed" for="consent">
+                        <input type="checkbox" id="consent" name="Consentement" value="oui" required class="mt-0.5 accent-paprika">
+                        <span>J'accepte que mes données soient utilisées pour traiter ma demande de devis (voir la Politique de Confidentialité en bas de page).</span>
+                    </label>
+
+                    <p id="form-error" class="hidden text-sm text-red-600 font-medium" role="alert">L'envoi a échoué. Appelez-nous au 06 85 88 22 50 ou écrivez à singla.paella@gmail.com.</p>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-paprika to-saffron text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i>
                         <span>Envoyer ma demande</span>
                     </button>
@@ -508,7 +525,7 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Prix par personne :</span>
-                                <span id="summary-price-unit" class="font-semibold">13,00 €</span>
+                                <span id="summary-price-unit" class="font-semibold">14,00 €</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Déplacement & Matériel :</span>
@@ -518,25 +535,22 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
 
                         <div class="pt-6 border-t border-gray-700">
                             <span class="block text-xs uppercase tracking-wider text-gray-400 mb-1">Montant estimé (TTC)</span>
-                            <span id="total-price" class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-warmYellow to-saffron">520,00 €</span>
+                            <span id="total-price" class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-warmYellow to-saffron">560,00 €</span>
                         </div>
                     </div>
-
-                    <div class="pt-6 text-xs text-gray-400 space-y-2">
-                        <p><i class="fa-solid fa-circle-info text-saffron mr-1"></i> *Inclus service et matériel dans un rayon de 30km.</p>
-                        <p>Une confirmation précise vous sera envoyée sous 24h ouvrées.</p>
-                    </div>
+                    <p class="text-xs text-gray-400 mt-8 leading-relaxed">*Estimation indicative, hors cas particuliers. Le devis définitif vous est confirmé par Valérie &amp; Yannick selon la date et le lieu de votre événement.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="success-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl transform transition-all">
+    <!-- Modale de confirmation d'envoi -->
+    <div id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-4 shadow-2xl">
             <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto">
                 <i class="fa-solid fa-check"></i>
             </div>
-            <h3 class="text-2xl font-bold font-serif text-slateDark">Demande Envoyée !</h3>
+            <h3 id="success-title" class="text-2xl font-bold font-serif text-slateDark">Demande Envoyée !</h3>
             <p class="text-gray-600 text-sm">
                 Merci d'avoir contacté Singla Paëlla. Nous étudions votre demande et vous recontactons dans les plus brefs délais avec une proposition détaillée.
             </p>
@@ -551,12 +565,11 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
                 
                 <div class="space-y-4 md:col-span-1">
-                    <a href="#accueil" onclick="scrollToSection(event, 'accueil')" class="flex items-center gap-3">
+                    <a href="#accueil" class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full overflow-hidden bg-paprika p-0.5 shrink-0 flex items-center justify-center">
                             <img src="https://thumbs.dreamstime.com/b/crevette-de-bande-dessin%C3%A9e-69115140.jpg" 
-                                 alt="Logo Singla Paella" 
-                                 class="w-full h-full object-cover rounded-full"
-                                 onerror="this.src='https://placehold.co/100x100/C8381A/FFF?text=Paella'"/>
+                                 alt="Logo Singla Paëlla" 
+                                 class="w-full h-full object-cover rounded-full" />
                         </div>
                         <span class="text-xl font-bold font-serif text-white">Singla Paëlla</span>
                     </a>
@@ -565,18 +578,18 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                     </p>
                     <div class="flex gap-3 text-lg text-white">
                         <a href="https://www.facebook.com/p/Singla-Paella-100079516337195/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-paprika transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/singla.paella?obrf=MW1ycHQ5cHVyejgxYQ%3D%3D" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-paprika transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-paprika transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/singla.paella" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-paprika transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/33685882250" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-paprika transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <div>
                     <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navigation</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#accueil" onclick="scrollToSection(event, 'accueil')" class="hover:text-saffron transition-colors">Accueil</a></li>
-                        <li><a href="#specialites" onclick="scrollToSection(event, 'specialites')" class="hover:text-saffron transition-colors">Nos Spécialités</a></li>
-                        <li><a href="#prestations" onclick="scrollToSection(event, 'prestations')" class="hover:text-saffron transition-colors">Prestations</a></li>
-                        <li><a href="#devis" onclick="scrollToSection(event, 'devis')" class="hover:text-saffron transition-colors">Devis en ligne</a></li>
+                        <li><a href="#accueil" class="hover:text-saffron transition-colors">Accueil</a></li>
+                        <li><a href="#specialites" class="hover:text-saffron transition-colors">Nos Recettes</a></li>
+                        <li><a href="#prestations" class="hover:text-saffron transition-colors">Prestations</a></li>
+                        <li><a href="#devis" class="hover:text-saffron transition-colors">Devis en ligne</a></li>
                     </ul>
                 </div>
 
@@ -585,7 +598,7 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-saffron"></i>
-                            <a href="tel:0685882250" class="hover:text-white">+33 6 85 88 22 50</a>
+                            <a href="tel:+33685882250" class="hover:text-white">+33 6 85 88 22 50</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-envelope text-saffron"></i>
@@ -604,7 +617,7 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                         Sur réservation pour vos événements.
                     </p>
                     <div class="inline-block bg-saffron/10 border border-saffron/30 text-saffron text-xs font-semibold px-3 py-2 rounded-lg">
-                        <i class="fa-solid fa-calendar-check mr-1"></i> Réservations 2026/2027 Ouvertes
+                        <i class="fa-solid fa-calendar-check mr-1"></i> Réservations 2027 Ouvertes
                     </div>
                 </div>
 
@@ -620,8 +633,8 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
         </div>
     </footer>
 
-    <div id="legal-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-3xl max-w-2xl w-full text-slateDark shadow-2xl overflow-hidden my-8 transform transition-all">
+    <div id="legal-modal" role="dialog" aria-modal="true" aria-label="Mentions légales" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full text-slateDark shadow-2xl overflow-hidden my-8">
             <div class="bg-gradient-to-r from-paprika to-saffron p-6 text-white flex justify-between items-center">
                 <h3 class="text-2xl font-bold font-serif flex items-center gap-2">
                     <i class="fa-solid fa-scale-balanced"></i>
@@ -662,6 +675,10 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                         <span class="font-bold text-gray-500">Numéro d'enregistrement (SIRET)</span>
                         <span class="font-mono font-bold text-slateDark">91782569700019</span>
                     </div>
+                    <div class="p-4 flex flex-col sm:flex-row sm:justify-between gap-1">
+                        <span class="font-bold text-gray-500">Directeur de la publication</span>
+                        <span class="font-bold text-slateDark">VALERIE BIRABENT</span>
+                    </div>
                 </div>
             </div>
 
@@ -673,8 +690,8 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
         </div>
     </div>
 
-    <div id="privacy-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-3xl max-w-3xl w-full text-slateDark shadow-2xl overflow-hidden my-8 transform transition-all">
+    <div id="privacy-modal" role="dialog" aria-modal="true" aria-label="Politique de confidentialité" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full text-slateDark shadow-2xl overflow-hidden my-8">
             <div class="bg-gradient-to-r from-paprika to-saffron p-6 text-white flex justify-between items-center">
                 <h3 class="text-2xl font-bold font-serif flex items-center gap-2">
                     <i class="fa-solid fa-user-shield"></i>
@@ -694,13 +711,14 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                 <div>
                     <h4 class="text-base font-bold text-paprika mb-2">2. Traitement des données à caractère personnel</h4>
                     <p>Lors de l'utilisation de notre site, certaines données personnelles sont collectées automatiquement sur votre appareil (ordinateur, téléphone portable, tablette, etc.). L'adresse IP actuellement utilisée par votre appareil, la date, l'heure, le navigateur, le système d'exploitation de votre appareil et les pages récupérées sont collectés. Ceci dans le but de veiller à la sécurité des données, pour optimiser notre portée et améliorer notre site Web. Le traitement de ces données personnelles est effectué en vertu de l'art. 6, paragr. 1, phrase 1, lettre f) du RGPD (Règlement général sur la protection des données).</p>
-                    <p class="mt-2">Si vous nous contactez (p. ex. via le formulaire de devis), nous ne traiterons que les données personnelles que vous nous aurez fournies (nom, téléphone, email, détails de l'événement) et qui sont nécessaires pour traiter votre demande et y répondre.</p>
+                    <p class="mt-2">Si vous nous contactez (p. ex. via le formulaire de devis), nous ne traiterons que les données personnelles que vous nous aurez fournies (nom, téléphone, email, détails de l'événement) et qui sont nécessaires pour traiter votre demande et y répondre (art. 6, paragr. 1, lettre b) du RGPD).</p>
+                    <p class="mt-2">Le formulaire de devis est acheminé par le service FormSubmit (formsubmit.co), qui nous transmet votre message par e-mail. Les polices (Google Fonts) et certaines ressources du site (CDN) sont chargées depuis des serveurs tiers, qui reçoivent de ce fait votre adresse IP.</p>
                 </div>
 
                 <div>
                     <h4 class="text-base font-bold text-paprika mb-2">3. Cookies & Mesures d'audience</h4>
                     <p>Afin de rendre nos services attrayants et permettre l’utilisation de certaines fonctions, nous pouvons utiliser des cookies. Il s’agit de petits fichiers textes qui sont enregistrés sur votre appareil. Vous pouvez configurer votre navigateur de façon à être informé de l’utilisation de cookies et décider au cas par cas de les accepter ou de les refuser.</p>
-                    <p class="mt-2">Des outils tiers d'analyse (tels que Google Analytics ou Adobe Analytics) ou réseaux sociaux (Facebook Pixel) peuvent être employés pour évaluer l'utilisation du site et vous présenter des contenus adaptés en vertu de l'art. 6, paragr. 1, p.1, lettre a) du RGPD.</p>
+                    <p class="mt-2">Ce site n'utilise ni outil de mesure d'audience, ni cookie publicitaire. Si cela devait changer, votre consentement serait recueilli au préalable.</p>
                 </div>
 
                 <div>
@@ -720,7 +738,7 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                         <li>Droit de révoquer un consentement (art. 7 RGPD)</li>
                         <li>Droit d'opposition (art. 21 RGPD)</li>
                     </ul>
-                    <p class="mt-2">Vous pouvez faire valoir vos droits à tout moment en nous contactant à <a href="mailto:singla.paella@gmail.com" class="text-paprika font-bold underline">singla.paella@gmail.com</a>.</p>
+                    <p class="mt-2">Vous disposez également du droit d'introduire une réclamation auprès de la CNIL (cnil.fr). Vous pouvez faire valoir vos droits à tout moment en nous contactant à <a href="mailto:singla.paella@gmail.com" class="text-paprika font-bold underline">singla.paella@gmail.com</a>.</p>
                 </div>
             </div>
 
@@ -733,161 +751,151 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
     </div>
 
     <script>
-        // Smooth scroll fix for mobile devices
-        function scrollToSection(event, targetId) {
-            if (event) event.preventDefault();
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        (function () {
+            const MIN_GUESTS = 10, MAX_GUESTS = 300;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+            // Menu mobile
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            function setMenu(open) {
+                mobileMenu.classList.toggle('hidden', !open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+                menuIcon.classList.toggle('fa-bars', !open);
+                menuIcon.classList.toggle('fa-xmark', open);
             }
-            // Close mobile menu if open
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.replace('fa-xmark', 'fa-bars');
-            }
-        }
+            menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+            mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+            // Simulateur de devis
+            const recipeSelect = document.getElementById('recipe');
+            const guestsInput = document.getElementById('guests');
+            const guestsNumberInput = document.getElementById('guests-number');
+            const summaryRecipe = document.getElementById('summary-recipe');
+            const summaryGuests = document.getElementById('summary-guests');
+            const summaryPriceUnit = document.getElementById('summary-price-unit');
+            const totalPriceDisplay = document.getElementById('total-price');
+            const hiddenTotalInput = document.getElementById('hidden-total');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.replace('fa-xmark', 'fa-bars');
-            } else {
-                menuIcon.classList.replace('fa-bars', 'fa-xmark');
-            }
-        });
+            const clamp = v => {
+                v = parseInt(v, 10);
+                return isNaN(v) ? MIN_GUESTS : Math.min(MAX_GUESTS, Math.max(MIN_GUESTS, v));
+            };
+            const euro = n => n.toFixed(2).replace('.', ',') + ' €';
 
-        const recipeSelect = document.getElementById('recipe');
-        const guestsInput = document.getElementById('guests');
-        const guestsNumberInput = document.getElementById('guests-number');
-        
-        const summaryRecipe = document.getElementById('summary-recipe');
-        const summaryGuests = document.getElementById('summary-guests');
-        const summaryPriceUnit = document.getElementById('summary-price-unit');
-        const totalPriceDisplay = document.getElementById('total-price');
-        const hiddenTotalInput = document.getElementById('hidden-total');
+            function updateQuote(source) {
+                const option = recipeSelect.options[recipeSelect.selectedIndex];
+                if (!option) return;
 
-        const commentInput = document.getElementById('quote-comment');
-        const charCounter = document.getElementById('char-counter');
-
-        if (commentInput && charCounter) {
-            commentInput.addEventListener('input', () => {
-                const remaining = 300 - commentInput.value.length;
-                charCounter.textContent = `${remaining} car. restant${remaining > 1 ? 's' : ''}`;
-                if (remaining < 30) {
-                    charCounter.classList.add('text-paprika', 'font-bold');
-                    charCounter.classList.remove('text-gray-400');
+                let guests;
+                if (source === 'range') {
+                    guests = clamp(guestsInput.value);
+                    guestsNumberInput.value = guests;
                 } else {
-                    charCounter.classList.remove('text-paprika', 'font-bold');
-                    charCounter.classList.add('text-gray-400');
+                    guests = clamp(guestsNumberInput.value);
+                    guestsInput.value = guests;
+                }
+
+                const unit = parseFloat(option.dataset.price) || 0;
+                summaryRecipe.textContent = option.text.split(' - ')[0];
+                summaryGuests.textContent = guests + ' personnes';
+                summaryPriceUnit.textContent = euro(unit);
+                totalPriceDisplay.textContent = euro(unit * guests);
+                hiddenTotalInput.value = euro(unit * guests);
+            }
+
+            recipeSelect.addEventListener('change', () => updateQuote('select'));
+            guestsInput.addEventListener('input', () => updateQuote('range'));
+            guestsNumberInput.addEventListener('input', () => updateQuote('number'));
+            guestsNumberInput.addEventListener('change', () => {
+                guestsNumberInput.value = clamp(guestsNumberInput.value);
+                updateQuote('number');
+            });
+
+            window.selectRecipe = function (key) {
+                recipeSelect.value = key;
+                if (recipeSelect.value !== key) return;
+                updateQuote('select');
+                document.getElementById('devis').scrollIntoView({ behavior: 'smooth' });
+            };
+
+            // Date : pas de date passée
+            const dateInput = document.getElementById('event-date');
+            const now = new Date();
+            now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+            dateInput.min = now.toISOString().slice(0, 10);
+
+            // Compteur de caractères
+            const commentInput = document.getElementById('quote-comment');
+            const charCounter = document.getElementById('char-counter');
+            function updateCounter() {
+                const remaining = 300 - commentInput.value.length;
+                charCounter.textContent = remaining + ' car. restant' + (remaining > 1 ? 's' : '');
+                charCounter.classList.toggle('text-paprika', remaining < 30);
+                charCounter.classList.toggle('font-bold', remaining < 30);
+                charCounter.classList.toggle('text-gray-500', remaining >= 30);
+            }
+            commentInput.addEventListener('input', updateCounter);
+
+            // Modales
+            const successModal = document.getElementById('success-modal');
+            const legalModal = document.getElementById('legal-modal');
+            const privacyModal = document.getElementById('privacy-modal');
+            const modals = [successModal, legalModal, privacyModal];
+
+            function toggleModal(modal, show) {
+                modal.classList.toggle('hidden', !show);
+                modal.classList.toggle('flex', show);
+                document.body.classList.toggle('overflow-hidden', modals.some(m => !m.classList.contains('hidden')));
+            }
+
+            document.getElementById('open-legal-modal').addEventListener('click', () => toggleModal(legalModal, true));
+            document.getElementById('close-legal-modal').addEventListener('click', () => toggleModal(legalModal, false));
+            document.getElementById('btn-close-legal').addEventListener('click', () => toggleModal(legalModal, false));
+            document.getElementById('open-privacy-modal').addEventListener('click', () => toggleModal(privacyModal, true));
+            document.getElementById('close-privacy-modal').addEventListener('click', () => toggleModal(privacyModal, false));
+            document.getElementById('btn-close-privacy').addEventListener('click', () => toggleModal(privacyModal, false));
+
+            modals.forEach(m => m.addEventListener('click', e => { if (e.target === m) toggleModal(m, false); }));
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') modals.forEach(m => toggleModal(m, false));
+            });
+
+            // Envoi du formulaire (sans quitter la page)
+            const quoteForm = document.getElementById('quote-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formError = document.getElementById('form-error');
+
+            quoteForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                formError.classList.add('hidden');
+                submitBtn.disabled = true;
+                try {
+                    const res = await fetch('https://formsubmit.co/ajax/singla.paella@gmail.com', {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: new FormData(quoteForm)
+                    });
+                    const data = await res.json().catch(() => ({}));
+                    if (!res.ok || data.success === false || data.success === 'false') throw new Error('send failed');
+                    toggleModal(successModal, true);
+                } catch (err) {
+                    formError.classList.remove('hidden');
+                } finally {
+                    submitBtn.disabled = false;
                 }
             });
-        }
 
-        function updateQuote(source) {
-            const selectedOption = recipeSelect.options[recipeSelect.selectedIndex];
-            if (!selectedOption) return;
+            document.getElementById('close-modal').addEventListener('click', () => {
+                toggleModal(successModal, false);
+                quoteForm.reset();
+                updateCounter();
+                updateQuote('number');
+            });
 
-            if (source === 'range') {
-                guestsNumberInput.value = guestsInput.value;
-            } else if (source === 'number') {
-                let val = parseInt(guestsNumberInput.value) || 10;
-                if (val < 10) val = 10;
-                if (val > 300) val = 300;
-                guestsInput.value = val;
-            }
-
-            const pricePerPerson = parseFloat(selectedOption.getAttribute('data-price')) || 0;
-            const guestsCount = parseInt(guestsInput.value) || 0;
-
-            const total = pricePerPerson * guestsCount;
-
-            summaryRecipe.textContent = selectedOption.text.split(' - ')[0];
-            summaryGuests.textContent = `${guestsCount} personnes`;
-            summaryPriceUnit.textContent = `${pricePerPerson.toFixed(2).replace('.', ',')} €`;
-            
-            const totalFormatted = `${total.toFixed(2).replace('.', ',')} €`;
-            totalPriceDisplay.textContent = totalFormatted;
-            if (hiddenTotalInput) hiddenTotalInput.value = totalFormatted;
-        }
-
-        recipeSelect.addEventListener('change', () => updateQuote('select'));
-        guestsInput.addEventListener('input', () => updateQuote('range'));
-        guestsNumberInput.addEventListener('input', () => updateQuote('number'));
-        guestsNumberInput.addEventListener('change', () => {
-            let val = parseInt(guestsNumberInput.value) || 10;
-            if (val < 10) guestsNumberInput.value = 10;
-            if (val > 300) guestsNumberInput.value = 300;
             updateQuote('number');
-        });
-
-        function selectRecipe(recipeKey) {
-            recipeSelect.value = recipeKey;
-            updateQuote('select');
-            scrollToSection(null, 'devis');
-        }
-
-        updateQuote('range');
-
-        const quoteForm = document.getElementById('quote-form');
-        const successModal = document.getElementById('success-modal');
-        const closeModalBtn = document.getElementById('close-modal');
-
-        closeModalBtn.addEventListener('click', () => {
-            successModal.classList.add('hidden');
-            successModal.classList.remove('flex');
-            quoteForm.reset();
-            if (commentInput && charCounter) {
-                charCounter.textContent = '300 car. restants';
-                charCounter.classList.remove('text-paprika', 'font-bold');
-                charCounter.classList.add('text-gray-400');
-            }
-            updateQuote('range');
-        });
-
-        // Modals Management
-        const legalModal = document.getElementById('legal-modal');
-        const openLegalBtn = document.getElementById('open-legal-modal');
-        const closeLegalBtn = document.getElementById('close-legal-modal');
-        const btnCloseLegal = document.getElementById('btn-close-legal');
-
-        const privacyModal = document.getElementById('privacy-modal');
-        const openPrivacyBtn = document.getElementById('open-privacy-modal');
-        const closePrivacyBtn = document.getElementById('close-privacy-modal');
-        const btnClosePrivacy = document.getElementById('btn-close-privacy');
-
-        function toggleModal(modal, show) {
-            if (show) {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-            } else {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
-        }
-
-        openLegalBtn.addEventListener('click', () => toggleModal(legalModal, true));
-        closeLegalBtn.addEventListener('click', () => toggleModal(legalModal, false));
-        btnCloseLegal.addEventListener('click', () => toggleModal(legalModal, false));
-
-        openPrivacyBtn.addEventListener('click', () => toggleModal(privacyModal, true));
-        closePrivacyBtn.addEventListener('click', () => toggleModal(privacyModal, false));
-        btnClosePrivacy.addEventListener('click', () => toggleModal(privacyModal, false));
-
-        window.addEventListener('click', (e) => {
-            if (e.target === legalModal) toggleModal(legalModal, false);
-            if (e.target === privacyModal) toggleModal(privacyModal, false);
-        });
+        })();
     </script>
 </body>
 </html>
