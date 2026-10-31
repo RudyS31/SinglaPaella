@@ -425,13 +425,13 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                     <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_autoresponse" value="Bonjour ! Merci d'avoir contacté Singla Paëlla. Nous avons bien enregistré votre demande de devis. Notre équipe étudie les disponibilités à la date demandée et revient vers vous rapidement. Pour toute urgence ou précision concernant votre demande, n'hésitez pas à nous appeler directement au 06 85 88 22 50. Gourmandement vôtre, Valérie & Yannick — Singla Paëlla">
-                    <input type="hidden" id="hidden-total" name="Montant_Estime" value="560,00 €">
+                    <input type="hidden" id="hidden-total" name="Montant_Estime" value="130,00 €">
 
                     <div>
                         <label class="block text-sm font-bold text-slateDark mb-2" for="recipe">1. Choisir la recette</label>
                         <select id="recipe" name="Recette_Choisie" class="w-full bg-riceCream border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-paprika outline-none font-medium">
-                            <option value="traditionnelle" data-price="13">Paella La Tradi - 13€/pers</option>
-                            <option value="fideua" data-price="14" selected>La Fideua - 14€/pers</option>
+                            <option value="traditionnelle" data-price="13" selected>Paella La Tradi - 13€/pers</option>
+                            <option value="fideua" data-price="14">La Fideua - 14€/pers</option>
                             <option value="rougail" data-price="12">Le Rougail - 12€/pers</option>
                             <option value="encornets" data-price="14">Encornets farcis - 14€/pers</option>
                             <option value="parmentier" data-price="14">Parmentier de canard - 14€/pers</option>
@@ -445,12 +445,12 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                         <div class="flex justify-between items-center mb-2">
                             <label class="text-sm font-bold text-slateDark" for="guests">2. Nombre de convives</label>
                             <div class="flex items-center gap-2">
-                                <input type="number" id="guests-number" aria-label="Nombre de convives (saisie)" name="Nombre_de_convives" min="10" max="300" value="40" 
+                                <input type="number" id="guests-number" aria-label="Nombre de convives (saisie)" name="Nombre_de_convives" min="10" max="300" value="10" 
                                        class="w-20 bg-orange-50 border border-paprika/30 text-paprika font-extrabold text-center rounded-lg py-1 px-2 text-sm focus:ring-2 focus:ring-paprika outline-none">
                                 <span class="text-sm font-semibold text-slateDark">pers.</span>
                             </div>
                         </div>
-                        <input type="range" id="guests" min="10" max="300" step="1" value="40" 
+                        <input type="range" id="guests" min="10" max="300" step="1" value="10" 
                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-paprika">
                         <div class="flex justify-between text-xs text-gray-500 mt-1">
                             <span>10 pers. min</span>
@@ -517,15 +517,15 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Recette sélectionnée :</span>
-                                <span id="summary-recipe" class="font-semibold text-right">La Fideua</span>
+                                <span id="summary-recipe" class="font-semibold text-right">Paella La Tradi</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Nombre de parts :</span>
-                                <span id="summary-guests" class="font-semibold">40 personnes</span>
+                                <span id="summary-guests" class="font-semibold">10 personnes</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Prix par personne :</span>
-                                <span id="summary-price-unit" class="font-semibold">14,00 €</span>
+                                <span id="summary-price-unit" class="font-semibold">13,00 €</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Déplacement & Matériel :</span>
@@ -535,7 +535,7 @@ Tout était parfait, les portions sont généreuses mais surtout la Paella est v
 
                         <div class="pt-6 border-t border-gray-700">
                             <span class="block text-xs uppercase tracking-wider text-gray-400 mb-1">Montant estimé (TTC)</span>
-                            <span id="total-price" class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-warmYellow to-saffron">560,00 €</span>
+                            <span id="total-price" class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-warmYellow to-saffron">130,00 €</span>
                         </div>
                     </div>
                     <p class="text-xs text-gray-400 mt-8 leading-relaxed">*Estimation indicative, hors cas particuliers. Le devis définitif vous est confirmé par Valérie &amp; Yannick selon la date et le lieu de votre événement.</p>
